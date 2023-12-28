@@ -1,36 +1,17 @@
 import 'package:flutter/material.dart';
-import '../widgets/course_detail/course_detail.dart';
-import '../widgets/reusable_button/reusable_button.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
-import '../widgets/centered_screen/centered_screen.dart';
-import '../widgets/navigation_bar/navigation_bar.dart';
+import 'home_content_desktop.dart';
+import 'home_content_mobile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white,
-      body: CenteredScreen(
-        child: Column(
-          children: [
-            ReusableNavigationBar(),
-            Expanded(
-              child: Row(
-                children: [
-                  CourseDetails(),
-                  Expanded(
-                    child: Center(
-                      child: ReusableButton("Join Course"),
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
+    return ScreenTypeLayout.builder(
+      mobile: (context) => const HomeContentMobile(),
+      desktop: (context) => const HomeContentDesktop(),
     );
   }
 }
