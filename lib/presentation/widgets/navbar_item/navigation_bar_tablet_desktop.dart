@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course/routing/app_route_name.dart';
 
 import 'navbar_item.dart';
-import 'navbar_logo.dart';
+import '../navigation_bar/navbar_logo.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {
   const NavigationBarTabletDesktop({super.key});

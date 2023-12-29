@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/presentation/widgets/navigation_drawer/navigation_drawer.dart';
 
-import 'navbar_logo.dart';
+import '../navigation_bar/navbar_logo.dart';
 
 class NavigationBarMobile extends StatelessWidget {
   const NavigationBarMobile({super.key});
